@@ -4,6 +4,9 @@ import styles from "../styles/navigation.module.css";
 const links = [
   { label: "Home", route: "/" },
   { label: "About", route: "/about" },
+  { label: "Posts", route: "/posts" },
+
+  // https://jsonplaceholder.typicode.com/posts
 ];
 
 export default function Navigation() {
