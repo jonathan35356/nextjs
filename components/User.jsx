@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import Link from "next/link";
 
 export default function User({ user }) {
+  const [hired, setHired] = useState(false);
   const { id, email, avatar, first_name, last_name } = user;
   return (
     <li
@@ -12,6 +16,7 @@ export default function User({ user }) {
         <p>{email}</p>
         <p>{first_name}</p>
         <p>{last_name}</p>
+        <Link href={`/users/${id}`}>Leer Post</Link>
       </div>
       <img src={avatar} alt={email} style={{ borderRadius: "50%" }} />
     </li>
