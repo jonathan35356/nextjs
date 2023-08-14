@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "../styles/navigation.module.css";
 
 const links = [
   { label: "Home", route: "/posts" },
