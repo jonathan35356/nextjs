@@ -9,9 +9,7 @@ export default function Layout({ children, title = "", description = "" }) {
         <meta name="description" content={description} />
       </head>
       <body>
-        <header>
-          <Navigation />
-        </header>
+        <Navigation />
         {children}
       </body>
     </html>

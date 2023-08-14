@@ -1,12 +1,12 @@
 import React from "react";
 import LikeButton from "../app/posts/LikeButton";
 
-export default async function ListOfPosts({ posts }) {
-  console.log(posts);
+export default async function ListOfPosts() {
+  const posts = await getPosts();
 
   return (
     <>
-      {posts.slice(0, 5).map((post) => (
+      {posts?.slice(0, 5).map((post) => (
         <article key={post.id}>
           <h2 style={{ color: "#09f" }}>{post.title}</h2>
           <p>{post.body}</p>
@@ -17,12 +17,10 @@ export default async function ListOfPosts({ posts }) {
   );
 }
 
-export async function getStaticProps() {
-  const respuesta = await fetch("https://jsonplaceholder.typicode.com/posts");
+export async function getPosts() {
+  const respuesta = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: "no-store",
+  });
   const posts = await respuesta.json();
-  return {
-    props: {
-      posts,
-    },
-  };
+  return posts;
 }
