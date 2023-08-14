@@ -2,11 +2,9 @@ import Link from "next/link";
 import styles from "../styles/navigation.module.css";
 
 const links = [
-  { label: "Home", route: "/" },
+  { label: "Home", route: "/posts" },
   { label: "About", route: "/about" },
-  { label: "Posts", route: "/posts" },
-
-  // https://jsonplaceholder.typicode.com/posts
+  { label: "Services", route: "/services" },
 ];
 
 export default function Navigation() {

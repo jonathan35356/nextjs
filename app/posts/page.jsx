@@ -1,9 +1,13 @@
-import ListOfPosts from "@/components/ListOfPosts";
+import ListOfUsers from "@/components/ListOfUsers";
+
+export const metadata = {
+  title: "List of users",
+};
 
 export default async function PostsPage() {
   return (
     <section>
-      <ListOfPosts />
+      <ListOfUsers />
     </section>
   );
 }
