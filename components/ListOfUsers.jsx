@@ -10,13 +10,14 @@ export default async function ListOfUsers() {
   const users = await getPosts();
 
   return (
-    <>
-      <article>
-        {users?.slice(0, 5).map((user) => (
+    <article>
+      <h1>Index page</h1>
+      <ul className="list-group">
+        {users?.map((user) => (
           <User user={user} />
         ))}
-      </article>
-    </>
+      </ul>
+    </article>
   );
 }
 

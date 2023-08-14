@@ -1,12 +1,7 @@
-import Image from "next/image";
+import React from "react";
 
-import Layout from "./layout";
-
-export default function HomePage() {
-  return (
-    <main>
-      {" "}
-      <h1>nuestra app en react</h1>
-    </main>
-  );
+function page() {
+  return <div>page</div>;
 }
+
+export default page;
